@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ExpressStore.Infrastructure.Catalog.Models
 {
-    public abstract class EntityBaseWithTypedId
+    public abstract class EntityBaseWithTypedId<TId> : ValidatableObject, IEntityWithTypedId<TId>
     {
+        public virtual TId Id { get; protected set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExpressStore.Infrastructure.Catalog.Models
 {
-    public abstract class EntityBase
+    public abstract class EntityBase: EntityBaseWithTypedId<long> 
     {
     }
 }
